@@ -1,0 +1,66 @@
+body{
+    background-color: lightyellow;
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: clamp(0.5fr, 0.7fr, 1fr) 4fr 1fr;
+    font-family: Consolas, sans-serif;
+}
+
+.header{
+    grid-row: 1/2;
+    text-align: center;
+}
+
+.library{
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+.id{
+    font-weight: bold;
+}
+
+.book {
+    border: 2px solid black;
+    border-radius: 2em;
+    background-color: antiquewhite;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content{
+    grid-column: 1/3;
+}
+
+.book-buttons{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1em;
+}
+
+
+button{
+    background-color: whitesmoke;
+    height: 2em;
+    width: 3em;
+    text-align: center;
+    border-radius: 1em;
+}
+
+.footer{
+    grid-row: 3/4;
+    text-align: center;
+    padding: 2em;
+}
+
+.library-buttons button{
+    font-size: 2em;
+}
