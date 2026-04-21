@@ -42,8 +42,8 @@ class Library{
 
 const library = new Library();
 const book1 = new Book("Super Mario Bros","Mario",500,true);
-const book2 = new Book("Super Mario Bros","Mario",500,true);
-const book3 = new Book("Super Mario Bros","Mario",500,true);
+const book2 = new Book("Super Luigi Bros","Luigi",500,true);
+const book3 = new Book("Super Michele Bros","Michele",500,true);
 library.addBook(book1);
 library.addBook(book2);
 library.addBook(book3);
