@@ -1,12 +1,12 @@
 body{
     background-color: lightyellow;
     height: 100vh;
+    font-family: Consolas, sans-serif;
 }
 
 .container{
     display: grid;
     grid-template-rows: clamp(0.5fr, 0.7fr, 1fr) 4fr 1fr;
-    font-family: Consolas, sans-serif;
 }
 
 .header{
@@ -32,6 +32,8 @@ body{
     padding: 2em;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    min-width: clamp(10em, 50%, 16em);
+    max-width: 20em;
 }
 
 .content{
@@ -46,14 +48,14 @@ body{
     gap: 1em;
 }
 
-
 button{
     background-color: whitesmoke;
     height: 2em;
     width: 3em;
     text-align: center;
     border-radius: 1em;
-}
+    font-size: 1em;
+    }
 
 .footer{
     grid-row: 3/4;
@@ -63,4 +65,43 @@ button{
 
 .library-buttons button{
     font-size: 2em;
+}
+
+.add-book-dialog[open]{
+    border: 2px solid black;
+    border-radius: 2em;
+    background-color: antiquewhite;
+    padding: 2em;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    width: clamp(15em, 20em, 25em);
+    margin: auto;
+    gap: 1em;
+}
+
+.add-book-dialog header{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.close-dialog-button{
+    justify-self: end;
+}
+
+.add-book-dialog header p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.add-book-form{
+    grid-row: 2/3;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+.add-dialog-button{
+    justify-self: end;
 }

@@ -16,9 +16,33 @@
   </div>
 <div class="footer">
     <div class="library-buttons">
-        <button class="add" title="Add book">➕</button>
+        <button class="open-dialog" title="Add book">➕</button>
     </div>
 </div>
-
+<dialog class="add-book-dialog" >
+    <header>
+        <p>Add Book</p>
+        <button class="close-dialog-button">❌</button>
+    </header>
+    <form class="add-book-form" method="dialog">
+        <label>
+            Title:
+            <input type="text" name="title" placeholder="Book Title" required>
+        </label>
+        <label>
+            Author:
+            <input type="text" name="author" placeholder="Author" required>
+        </label>
+        <label>
+            Pages:
+            <input type="number" name="pages" placeholder="Pages">
+        </label>
+        <label>
+            Read:
+            <input type="checkbox" name="read" placeholder="Read">
+        </label>
+        <button type="submit" class="add-dialog-button">➕</button>
+    </form>
+</dialog>
 </body>
 </html>

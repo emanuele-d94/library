@@ -48,7 +48,34 @@ library.addBook(book1);
 library.addBook(book2);
 library.addBook(book3);
 
-const addButton = document.querySelector(".add");
+const openDialogButton = document.querySelector(".open-dialog");
+const dialog = document.querySelector(".add-book-dialog");
+
+openDialogButton.addEventListener("click", () => {
+    dialog.showModal()
+})
+
+const closeBtn = document.querySelector('.close-dialog-button');
+closeBtn.addEventListener('click', () => {
+    dialog.close();
+});
+
+const addBookForm = document.querySelector('.add-book-form');
+addBookForm.addEventListener("submit", () => {
+    // 1. Estraiamo i dati dal form
+    const formData = new FormData(addBookForm);
+    // Recuperiamo i valori usando l'attributo 'name' degli input
+    const title = formData.get('title');
+    const author = formData.get('author');
+    const pages = formData.get('pages');
+    const isRead = formData.get('read') === 'on'; // I checkbox restituiscono 'on' se spuntati
+
+    const book = new Book(title, author, pages, isRead);
+    library.addBook(book);
+    updateLibrary()
+
+})
+
 let htmlLibrary = document.querySelector(".library");
 
 function updateLibrary(){
